@@ -45,4 +45,17 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
     ],
+    extras_require={  # Optional
+        "dev": [
+            "check-manifest",
+            "black",
+            "pylint",
+            "pytest",
+            "pytest-cov",
+            "pytest-xdist",
+            "tox",
+            "bump2version",
+        ],
+        "test": ["pytest", "pytest-cov", "pytest-forked", "pytest-xdist", "tox"],
+    },
 )
