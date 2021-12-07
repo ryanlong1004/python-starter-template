@@ -16,6 +16,11 @@ logger.setLevel(logging.DEBUG)
 
 
 def get_args():
+    """get_args [summary]
+
+    Returns:
+        [type]: [description]
+    """
     parser = argparse.ArgumentParser(description="new_project description")
     parser.add_argument(
         "positional argument path",
@@ -33,15 +38,13 @@ def get_args():
         "-b",
         "--bool",
         help="boolean flag",
-        action=argparse.BooleanOptionalAction,
         default=False,
     )
     return parser.parse_args()
 
 
 def main():
-    """main execution
-    """
+    """main execution"""
     print("main")
 
 
