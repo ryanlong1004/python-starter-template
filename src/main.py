@@ -1,5 +1,4 @@
 import logging
-from utils import get_root_dir
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -7,8 +6,13 @@ logging.basicConfig(
     handlers=[logging.FileHandler("archive_results.log"), logging.StreamHandler()],
 )
 
+
+def add_two(value: int) -> int:
+    """adds 2 to value and returns"""
+    return value + 2
+
 def main():
-    print(get_root_dir())
+    """main execution"""
 
 if __name__ == "__main__":
     main()
