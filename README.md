@@ -3,11 +3,12 @@
 Start your python projects off right!  Use this template.
 
 ## Basic Usage
-
 Create a new project on Github and use this repo as a template.
 
 Clone the newly made repo.
-
+```
+git clone <ssh_repo_url>
+```
 
 ### Create a Virtual Environment
 Once cloned, create a virtual environment.  You made nead to download additional packages if this is your first time creating a virtual environment.
@@ -38,6 +39,15 @@ Make sure your virtual environment is activated, and then install the applicatio
 pip install -e .'[dev]'
 ```
 This will install all necessary packages for production AND development.
+
+## Uploading to PyPi
+```
+python -m twine upload --repository <repo_url> dist/\*
+```
+
+# References
+[Python Packaging](https://packaging.python.org/en/latest/tutorials/packaging-projects/
+)
 
 # TODO
 1. Create python convenience script for adding the project name to the necessary files.
