@@ -1,12 +1,7 @@
-import json
-import os
-import pathlib
+"""
+Boilerplate gmail sending capabilities
+"""
 import smtplib, ssl
-
-
-config = json.load(open(pathlib.Path(ROOT_DIR, "./config.json"), "r+"))
-config["root_dir"] = os.path.dirname(os.path.abspath(__file__))
-
 
 def send_email(subject, text, password):
     """
