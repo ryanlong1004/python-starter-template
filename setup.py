@@ -5,28 +5,23 @@
 
 import os
 import sys
-import codecs
 import subprocess
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
-
-with codecs.open(os.path.join(here, "README.rst"), encoding="utf-8") as f:
-    long_description = "\n" + f.read()
-
 
 if sys.argv[-1] == "publish":
     subprocess.call(f"{sys.executable} setup.py sdist bdist_wheel upload", shell=False)
     sys.exit()
 
-required = [""]
+required = ["click"]
 
 setup(
     name="new_project",
     version="0.0.0",
     description="new_project description",
-    long_description=long_description,
+    # long_description=long_description,
     long_description_content_type="text/x-rst",
     author="Ryan Long",
     author_email="ryan.long@noaa.gov",
@@ -54,8 +49,9 @@ setup(
             "pytest-cov",
             "pytest-xdist",
             "tox",
-            "bump2version",
+            "icecream"
         ],
         "test": ["pytest", "pytest-cov", "pytest-forked", "pytest-xdist", "tox"],
     },
+    packages=find_packages()
 )
