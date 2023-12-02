@@ -4,29 +4,37 @@
 # pylint: disable=missing-module-docstring
 
 import os
-import sys
-import subprocess
 
 from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-if sys.argv[-1] == "publish":
-    subprocess.call(f"{sys.executable} setup.py sdist bdist_wheel upload", shell=False)
-    sys.exit()
-
 required = ["click"]
 
+required_extras = {  # Optional
+        "dev": [
+            "check-manifest",
+            "black",
+            "pylint",
+            "pytest",
+            "pytest-cov",
+            "pytest-xdist",
+            "tox",
+            "icecream"
+        ],
+        "test": ["pytest", "pytest-cov", "pytest-forked", "pytest-xdist", "tox"],
+    }
+
 setup(
-    name="new_project",
-    version="0.0.0",
-    description="new_project description",
+    name="<[Project Name]>",
+    version="0.0.1",
+    description="<[Project Name]> description",
     # long_description=long_description,
     long_description_content_type="text/x-rst",
     author="Ryan Long",
     author_email="ryan.long@noaa.gov",
     url="",
-    py_modules=["new_project"],
+    py_modules=["<[Project Name]>"],
     install_requires=required,
     tests_require=["pytest"],
     license="MIT",
@@ -40,18 +48,6 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
     ],
-    extras_require={  # Optional
-        "dev": [
-            "check-manifest",
-            "black",
-            "pylint",
-            "pytest",
-            "pytest-cov",
-            "pytest-xdist",
-            "tox",
-            "icecream"
-        ],
-        "test": ["pytest", "pytest-cov", "pytest-forked", "pytest-xdist", "tox"],
-    },
+    extras_require=required_extras,
     packages=find_packages()
 )

@@ -8,10 +8,11 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 class DbMySQL:
+    """repres"""
     
     def __init__(self):
         self.password = 'xxxxxxx@xxxx' # passwords with at symbols result in 'quote_plus'
-        self.engine = create_engine(f"mysql+pymysql://spot_reader:{quote_plus(self.password)}@10.251.3.131:3306/spotnws")
+        self.engine = create_engine(f"mysql+pymysql://user:{quote_plus(self.password)}@localhost:port")
         self.conn = connection.connect(
             host="localhost",  # your host, usually localhost
             user="user",  # your username
