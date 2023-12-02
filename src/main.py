@@ -11,8 +11,10 @@ def add_two(value: int) -> int:
     """adds 2 to value and returns"""
     return value + 2
 
+
 def main():
     """main execution"""
+
 
 if __name__ == "__main__":
     main()
