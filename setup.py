@@ -9,7 +9,10 @@ from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-required = ["click"]
+required = [
+    "click", 
+    "loguru==0.7.2"
+    ]
 
 required_extras = {  # Optional
         "dev": [
