@@ -1,5 +1,4 @@
 import logging
-from icecream import ic
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -18,4 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-    ic(add_two(2))
+    pass
