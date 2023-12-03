@@ -49,8 +49,11 @@ python -m twine upload --repository <repo_url> dist/\*
 [Python Packaging](https://packaging.python.org/en/latest/tutorials/packaging-projects/
 )
 
+
+
 # TODO
-1. Create python convenience script for adding the project name to the necessary files.
-2. Way to use both `pyproject.toml` and `setup.py`?  Keeping both up to date is cumbersome.
+[https://github.com/ryanlong1004/python-starter-template/issues
+](https://github.com/ryanlong1004/python-starter-template/issues
+)
 
 
