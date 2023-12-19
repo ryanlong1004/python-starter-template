@@ -1,6 +1,6 @@
 # Python Starter Template
 
-Start your python projects off right!  Use this template.
+[![Lint and Test](https://github.com/ryanlong1004/python-starter-template/actions/workflows/python-app.yml/badge.svg)](https://github.com/ryanlong1004/python-starter-template/actions/workflows/python-app.yml)
 
 ## Basic Usage
 Create a new project on Github and use this repo as a template.
