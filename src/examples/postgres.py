@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 import psycopg2
 import pandas as pd
 
+
 class DbPG:
     def __init__(self):
         # reading
@@ -22,12 +23,4 @@ class DbPG:
 
     def _query(self, query) -> Iterable[tuple]:
         """executes and returns query results as an iterable of tuples"""
-        return (
-            item
-            for item in pd.read_sql_query(query, con=self.engine).itertuples(
-                index=False
-            )
-        )
-
-    
-    
+        return (item for item in pd.read_sql_query(query, con=self.engine).itertuples(index=False))

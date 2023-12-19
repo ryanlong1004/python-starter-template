@@ -9,24 +9,21 @@ from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-required = [
-    "click", 
-    "loguru==0.7.2"
-    ]
+required = ["click", "loguru==0.7.2"]
 
 required_extras = {  # Optional
-        "dev": [
-            "check-manifest",
-            "black",
-            "pylint",
-            "pytest",
-            "pytest-cov",
-            "pytest-xdist",
-            "tox",
-            "icecream"
-        ],
-        "test": ["pytest", "pytest-cov", "pytest-forked", "pytest-xdist", "tox"],
-    }
+    "dev": [
+        "check-manifest",
+        "black",
+        "pylint",
+        "pytest",
+        "pytest-cov",
+        "pytest-xdist",
+        "tox",
+        "icecream",
+    ],
+    "test": ["pytest", "pytest-cov", "pytest-forked", "pytest-xdist", "tox"],
+}
 
 setup(
     name="<[Project Name]>",
@@ -52,5 +49,5 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     extras_require=required_extras,
-    packages=find_packages()
+    packages=find_packages(),
 )

@@ -3,9 +3,10 @@ Boilerplate gmail sending capabilities
 """
 import smtplib, ssl
 
+
 def send_email(subject, text, password):
     """
-    Send an email with gmail. 
+    Send an email with gmail.
     """
     port = 465  # For SSL
     smtp_server = "smtp.gmail.com"

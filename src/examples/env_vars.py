@@ -18,4 +18,3 @@ config = {
     **dotenv_values(".env.secret"),  # load sensitive variables
     **os.environ,  # override loaded values with environment variables
 }
-
